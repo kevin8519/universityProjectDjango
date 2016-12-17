@@ -1,0 +1,29 @@
+{% block content %}
+{% if student_name != ''%}
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<center>
+			<b>Student Name : {{ student_name }}</b>
+		</center>
+	</div>
+	<table class="table table-bordered table-striped">
+		<tbody>
+			{% for marks in results %}
+			<tr class="{% cycle 'odd' 'even' %}">
+				<th>{{ marks.get_subject_display }}</th>
+				<td class="right">{{ marks.marks }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% else %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<center>Student roll number not found</center>
+	</div>
+</div>
+{% endif %}
+ {% endblock %}

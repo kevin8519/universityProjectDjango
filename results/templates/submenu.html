@@ -1,0 +1,34 @@
+
+{% load staticfiles %}
+
+<script 
+   src= "{% static " js/jquery-3.1.0.min.js" %}">
+
+   </script>
+   
+ <script   src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+ 
+ </script>
+
+<script>
+$(document).ready(function(){
+  $('.list-group a').click(function(){
+    $('a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+
+  
+
+</script> 
+
+
+
+<div class="list-group">
+	<a id="1" href="{% url 'welcome' %}" class="list-group-item " data-toggle="pill">Home</a> 
+	<a id="1" href="{% url 'stureg' %}" class="list-group-item " data-toggle="pill">Registration</a> 
+	<a  id="2" href="{% url 'studentlist' %}" class="list-group-item " data-toggle="pill">ShowList</a> 
+					
+   <a id="3" href="{% url 'Markcreate' %}"	class="list-group-item " data-toggle="pill">Marks Create </a> 
+</div>
+

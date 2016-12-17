@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block extra_js %}
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+	$(document).ready(
+			function() {
+
+				$('#searchSubmit').click(
+						function() {
+							search_text = $('#search_text').val();
+							$('#results').html('&nbsp;').load(
+									"{% url 'results' %}?search_text="
+											+ search_text);
+						});
+			});
+</script>
+{% endblock %} {% block content %}
+
+<div class="row">
+	<div class="col-xs-6 col-sm-4"></div>
+	<div class="col-xs-6 col-sm-4">
+		<input id="search_text" type="text" style="width: 325px;"
+			placeholder="Enter your roll number" /> <input id="searchSubmit"
+			type="submit" value="Search" /> </span> <br /> {% load staticfiles %}
+	</div>
+</div>
+</br>
+<div class="row">
+	<div class="col-xs-6 col-sm-4"></div>
+	<div class="col-xs-6 col-sm-4">
+		<div id="results"></div>
+	</div>
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}

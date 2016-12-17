@@ -1,0 +1,64 @@
+{% extends "base.html"  %} {% block content %}
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">University Showlist</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			{% include "submenunav.html" %}
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-3">
+				<p class="lead">University</p>
+				{% include "submenu.html" %}
+			</div>
+				{% load staticfiles %}
+			<div class="col-md-9">
+				<div class="panel panel-default">
+					<div class="panel-heading">Welcome</div>
+					
+						<p> Welcome to Python</p>
+						
+						<img alt="python" src="{% static "css/python.jpg" %}">	
+											
+				</div>
+
+			</div>
+			<!-- /.container -->
+
+			<div class="container">
+
+				<hr>
+
+				<!-- Footer -->
+				<footer>
+					<div class="row">
+						<div class="col-lg-12">
+							<p>Copyright &copy; Your Website 2014</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		
+		{% endblock %}
+		<!-- /.container -->
+
+		

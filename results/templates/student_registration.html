@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Student Registration Form</title>
+
+
+</head>
+<body>
+<form id="user_form" method="POST" action="student_registration/">
+
+{% csrf_token %} <!--  {{student_form.as_p}}-->
+<table>
+<tr> 
+<th><label>Name</label></th> 
+<td> {{student_form.name}}</td>
+</tr>
+
+<tr> 
+<th><label>City</label></th> 
+<td> {{student_form.city}}</td>
+</tr>
+<tr> 
+<th><label>Age</label></th> 
+<td> {{student_form.age}}</td>
+</tr>
+<tr> 
+<th><label>Phone</label></th> 
+<td> {{student_form.gender}}</td>
+</tr>
+<tr> 
+<th><label>Email</label></th> 
+<td> {{student_form.address}}</td>
+</tr>
+<tr> 
+<th><label>Phone</label></th> 
+<td> {{student_form.phone}}</td>
+</tr>
+</table>
+
+<input type="submit" name="submit" value="Register">
+
+</form>
+
+</body>
+
+
+
+
+
+
+
+</html>
